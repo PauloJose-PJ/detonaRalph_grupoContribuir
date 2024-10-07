@@ -1,8 +1,5 @@
-main {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-image: url("../images/wall.jpg");
+body {
+    background-color: #000000;
 }
 
 header {
@@ -16,37 +13,46 @@ header {
     border-bottom: 5px solid gold;
 }
 
-section {
-    margin-top: 1rem;
+main {
     display: flex;
+    flex-direction: column;
+    height: 90vh;
+    align-items: center;
+    background-image: url("../images/wallCity.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+
+section {
+    margin-top: 60px;
+    display: flex;
+    width: 80%;
+    height: auto;
     align-items: center;
     justify-content: center;
 }
 
 .square {
-    height: 150px;
-    width: 150px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 160px;
+    height: 140px;
 }
 
 .enemy {
     background-image: url("../images/ralph1.png");
     background-size: cover;
     cursor: pointer;
+    width: 160px;
+    height: 140px;
 }
 
 .enemy:hover {
     border: #f5f242 solid 5px;
-    transition: 0.01s;
-}
-
-.hourglass {
-    background-image: url("../images/hourglass.png");
-    background-size: cover;
-    cursor: pointer;
-}
-
-.hourglass:hover {
-    border: #fff solid 4px;
     transition: 0.01s;
 }
 
@@ -62,3 +68,25 @@ section {
     margin-top: 1rem;
 }
 
+
+@media ((min-width: 1365px) and (max-width: 1918px)) {
+    body {
+        height: 80px;
+    }
+    section {
+        margin-top: 15px;
+        display: flex;
+        width: 80%;
+    }
+
+    .square {
+        margin-bottom: 10px;
+        width: 110px;
+        height: 100px;
+    }
+
+    .enemy {
+        width: 110px;
+        height: 100px;
+    }
+}
